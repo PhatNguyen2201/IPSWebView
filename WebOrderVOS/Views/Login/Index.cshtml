@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="~/style/grid.css">
+        <link rel="stylesheet" href="~/style/loginstyle.css">
+    </head>
+    <body>
+        <div class="loginArea">
+            <form method="post" asp-action="Login/Index">
+                <div class="group">
+                    <div class="col span_1_of_3">
+                        <label>User</label>
+                    </div>
+                    <div class="col span_2_of_3">
+                        <input type="text" name="username" placeholder="Username">
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="col span_1_of_3">
+                        <label>Password</label>
+                    </div>
+                    <div class="col span_2_of_3">
+                        <input type="password" name="pass" placeholder="Password">
+                    </div>
+                </div>
+                <div class="group">
+                    <input type="submit" class="btn" value="Login">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

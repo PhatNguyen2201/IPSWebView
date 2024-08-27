@@ -1,0 +1,70 @@
+﻿body {
+    background-image: linear-gradient(0deg, rgba(18,17,37,0.7) 0%, rgba(201,201,201,0.4) 100%), url("../Img/star-sky.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+label {
+    background-color: lightyellow;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.FilterArea {
+    margin: 10px;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.tableTitle {
+    position: relative;
+    width: 100%;
+    background-color: lightyellow;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.sticky {
+    position: fixed;
+    width: 99%;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(54, 33, 0, 0.8);
+}
+
+.tableItems {
+    width: 100%;
+    margin: auto;
+    color: black;
+    background-color: lightcyan;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+.columnStt {
+    width: 8%;
+}
+
+.columnPatient {
+    width: 200px;
+}
+
+.columnDate {
+    width: 18%;
+}
+
+.columnDateDue {
+    width: 18%;
+}
+
+.columnTech {
+    width: 10%;
+}
+
+.columnTreatment {
+    width: 15%;
+}

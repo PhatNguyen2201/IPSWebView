@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebOrderVOS.Models.HomeModels>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IPS Case list</title>
+    <link rel="stylesheet" href="~/style/StyleSheet.css">
+</head>
+
+<body>
+    <form class="FilterArea" method="post" asp-action="IndexFilter">
+        <label>Choose Filter:</label>
+        <select name="ReceivedDate" id="Date">
+            <option value="0">Today</option>
+            <option value="1">Last two days</option>
+            <option value="2">Last week</option>
+            <option value="3">Last month</option>
+            <option value="4">All</option>
+        </select>
+        <input type="submit" value="Filter">
+    </form>
+    <div class="container">
+        <div>
+            <table class="tableTitle">
+                <tr>
+                    <td class="columnStt">Status</td>
+                    <td class="columnPatient">Case/Patient</td>
+                    <td class="columnDate">Received</td>
+                    <td class="columnDateDue">Due</td>
+                    <td class="columnTech">Technician</td>
+                    <td class="columnTreatment">Treatment</td>
+                </tr>
+            </table>
+            <table class="tableItems">
+                <colgroup>
+                    <col span="1" class="columnStt">
+                    <col span="1" class="columnPatient">
+                    <col span="1" class="columnDate">
+                    <col span="1" class="columnDateDue">
+                    <col span="1" class="columnTech">
+                    <col span="1" class="columnTreatment">
+                </colgroup>
+                <tbody>
+                    @foreach (WebOrderVOS.Models.HomeModels item in Model)
+                    {
+                        <tr>
+                            <td>@item.Status</td>
+                            <td>@item.Paients</td>
+                            <td>@item.DateIn</td>
+                            <td>@item.DateDue</td>
+                            <td>@item.Technician</td>
+                            <td>@item.Treatment</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="~/scripts/jquery3.6.0.js"></script>
+    <script src="~/scripts/jquery.waypoints.min.js"></script>
+    <script src="~/scripts/scripts.js"></script>
+</body>
+</html>
